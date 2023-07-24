@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Bank of Flatiron
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bank of Flatiron is a mini web application built with React that allows users to view their recent bank transactions, add new transactions, and filter transactions by description. This project serves as a practice exercise to reinforce concepts like components, props, state, events, and data fetching in React.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- Project Overview
+- Project Setup
+- Features
+- Technologies Used
+- Installation
+- Usage
+- Contributing
+- License
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Bank of Flatiron is a React application that provides users with the following core features:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- View a table of all transactions.
+- Fill out and submit the form to add a new transaction. 
+- Filter transactions by typing into the search bar. 
 
-### `npm test`
+## Project Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get started with the project, follow these steps:
 
-### `npm run build`
+1. Create a new project folder and set up your React application using `npx create-react-app bankofflatiron`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. - Create a `db.json` file. 
+   - Run the following command to start the server: `npx json-server --watch db.json --port 8001` 
+   - If you don't want to specify the port, you can use the default port (3000) and run: `npx json-server --watch db.json` 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install the required dependencies for the project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Set up the local JSON DB server.
 
-### `npm run eject`
+5. Run the React application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The Bank of Flatiron project includes the following core deliverables:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Fill out and submit the form to add a new transaction. 
+- See a table of all transactions.
+- Filter transactions by typing into the search bar. Only transactions with a description matching the search term should be shown in the transactions table.
+- Sort transactions alphabetically by category or description
+- Ability to delete transactions from the table
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The project is built using the following technologies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- JSON DB server (for local data fetching)
 
-### Code Splitting
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To run the Bank of Flatiron application locally, follow these steps:
 
-### Analyzing the Bundle Size
+1. Clone this repository to your local machine.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Navigate to the project directory.
 
-### Making a Progressive Web App
+3. Install the required dependencies using `npm install`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Start the development server using `npm start`.
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions to the Bank of Flatiron project are welcome! If you have any improvements or bug fixes to propose, feel free to submit a pull request.
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is licensed under the [MIT License](LICENSE).
 
-### `npm run build` fails to minify
+## Author's Information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- LinkedIn: [Patience Mugambi](https://www.linkedin.com/feed/)
