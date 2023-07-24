@@ -1,47 +1,43 @@
-// TransactionsForm.js
-import React, { useState } from 'react';
+import React from 'react';
 
 const TransactionsForm = ({ addTransaction }) => {
-  // State to hold the form input values
-  const [description, setDescription] = useState('');
-  const [amount, setAmount] = useState('');
-  const [date, setDate] = useState('');
+  const descriptionRef = React.createRef();
+  const amountRef = React.createRef();
+  const dateRef = React.createRef();
 
-  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check if the description, amount, and date are not empty before adding the transaction
+    const description = descriptionRef.current.value;
+    const amount = amountRef.current.value;
+    const date = dateRef.current.value;
+
     if (description.trim() === '' || amount.trim() === '' || date.trim() === '') {
       return;
     }
 
-    // Create a new transaction object with a unique ID (you can use any logic to generate a unique ID)
     const newTransaction = {
-      id: Date.now(), // Just using the current timestamp as an example
+      id: Date.now(),
       description: description,
-      amount: +amount, // Convert the amount to a number
-      date: new Date(date).toISOString(), // Convert the date to an ISO string
+      amount: +amount,
+      date: date,
     };
 
-    // Call the 'addTransaction' function from the parent component (App.js) to add the new transaction
     addTransaction(newTransaction);
 
-    // Clear the form input values after submission
-    setDescription('');
-    setAmount('');
-    setDate('');
+    descriptionRef.current.value = '';
+    amountRef.current.value = '';
+    dateRef.current.value = '';
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="transaction-form">
       <div>
         <label htmlFor="description">Description</label>
         <input
           type="text"
           id="description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          ref={descriptionRef}
         />
       </div>
       <div>
@@ -49,8 +45,7 @@ const TransactionsForm = ({ addTransaction }) => {
         <input
           type="number"
           id="amount"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
+          ref={amountRef}
         />
       </div>
       <div>
@@ -58,8 +53,7 @@ const TransactionsForm = ({ addTransaction }) => {
         <input
           type="date"
           id="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
+          ref={dateRef}
         />
       </div>
       <button type="submit">Add Transaction</button>

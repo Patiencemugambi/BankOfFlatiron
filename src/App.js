@@ -1,9 +1,8 @@
-// App.js
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import TransactionsTable from './components/TransactionsTable';
 import TransactionsForm from './components/TransactionForm';
 import SearchBar from './components/SearchBar';
+import '../src/App.css'
 
 const App = () => {
   const [transactions, setTransactions] = useState([]);
@@ -22,9 +21,14 @@ const App = () => {
       });
   }, []);
 
+
+
+
+  
+
   // Function to handle adding a new transaction
   const addTransaction = (newTransaction) => {
-    // Assume newTransaction is an object containing properties like id, description, and amount
+    //  eg newTransaction is an object containing properties like id, description, and amount
     // Add the new transaction to the existing transactions list using the spread operator
     setTransactions([...transactions, newTransaction]);
     // Also update the filteredTransactions to include the new transaction if it matches the filter
@@ -49,10 +53,10 @@ const App = () => {
       {/* Render the TransactionsForm component and pass the 'addTransaction' function */}
       <TransactionsForm addTransaction={addTransaction} />
 
-      {/* Render the SearchBar component and pass the 'handleFilter' function */}
+      {/*SearchBar component and 'handleFilter' function */}
       <SearchBar onFilter={handleFilter} />
 
-      {/* Render the TransactionsTable component and pass the 'filteredTransactions' as a prop */}
+      {/* TransactionsTable component and pass the 'filteredTransactions' as a prop */}
       <TransactionsTable transactions={filteredTransactions} />
     </div>
   );

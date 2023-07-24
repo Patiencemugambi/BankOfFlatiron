@@ -1,6 +1,6 @@
 import React from 'react';
 
-// TransactionsTable component receives the transactions array as a prop.
+// TransactionsTable component receives the transactions array as a prop
 const TransactionsTable = ({ transactions }) => {
   return (
     // The component renders a table to display the list of transactions.

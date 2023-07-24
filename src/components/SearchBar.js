@@ -1,5 +1,3 @@
-// src/components/SearchBar.js
-
 import React, { useState } from 'react';
 
 const SearchBar = ({ onFilter }) => {
@@ -11,7 +9,7 @@ const SearchBar = ({ onFilter }) => {
   };
 
   return (
-    <div>
+    <div className="search-bar">
       <input
         type="text"
         value={searchTerm}
