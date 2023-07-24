@@ -39,7 +39,7 @@ To get started with the project, follow these steps:
 
 ## Features
 
-The Bank of Flatiron project includes the following core deliverables:
+The Bank of Flatiron project includes the following:
 
 - Fill out and submit the form to add a new transaction. 
 - See a table of all transactions.
