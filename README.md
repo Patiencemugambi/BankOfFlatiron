@@ -4,22 +4,22 @@ Bank of Flatiron is a mini web application built with React that allows users to
 
 ## Table of Contents
 
-- Project Overview
-- Project Setup
-- Features
-- Technologies Used
-- Installation
-- Usage
-- Contributing
-- License
+- [Project Overview](#project-overview)
+- [Project Setup](#project-setup)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author's Information](#authors-information)
 
 ## Project Overview
 
 Bank of Flatiron is a React application that provides users with the following core features:
 
 - View a table of all transactions.
-- Fill out and submit the form to add a new transaction. 
-- Filter transactions by typing into the search bar. 
+- Fill out and submit the form to add a new transaction.
+- Filter transactions by typing into the search bar.
 
 ## Project Setup
 
@@ -27,9 +27,9 @@ To get started with the project, follow these steps:
 
 1. Create a new project folder and set up your React application using `npx create-react-app bankofflatiron`.
 
-2. - Create a `db.json` file. 
-   - Run the following command to start the server: `npx json-server --watch db.json --port 8001` 
-   - If you don't want to specify the port, you can use the default port (3000) and run: `npx json-server --watch db.json` 
+2. - Create a `db.json` file.
+   - Run the following command to start the server: `npx json-server --watch db.json --port 8001`
+   - If you don't want to specify the port, you can use the default port (3000) and run: `npx json-server --watch db.json`
 
 3. Install the required dependencies for the project.
 
@@ -41,12 +41,11 @@ To get started with the project, follow these steps:
 
 The Bank of Flatiron project includes the following:
 
-- Fill out and submit the form to add a new transaction. 
+- Fill out and submit the form to add a new transaction.
 - See a table of all transactions.
 - Filter transactions by typing into the search bar. Only transactions with a description matching the search term should be shown in the transactions table.
-- Sort transactions alphabetically by category or description
-- Ability to delete transactions from the table
-
+- Sort transactions alphabetically by category or description.
+- Ability to delete transactions from the table.
 
 ## Technologies Used
 
