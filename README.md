@@ -1,6 +1,6 @@
 # Bank of Flatiron
 
-Bank of Flatiron is a mini web application built with React that allows users to view their recent bank transactions, add new transactions, and filter transactions by description. This project serves as a practice exercise to reinforce concepts like components, props, state, events, and data fetching in React.
+Bank of Flatiron is a mini web application built with React that allows users to view their recent bank transactions, add new transactions, and filter transactions by description. 
 
 ## Table of Contents
 
