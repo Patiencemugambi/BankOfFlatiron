@@ -9,29 +9,24 @@ const App = () => {
   const [filteredTransactions, setFilteredTransactions] = useState([]);
 
   useEffect(() => {
-    // Fetch data from API and store it in the 'transactions' state
     fetch('http://localhost:8001/transactions')
       .then((response) => response.json())
       .then((data) => {
         setTransactions(data);
-        setFilteredTransactions(data); // Set initial filteredTransactions to all transactions
+        setFilteredTransactions(data);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
   }, []);
-
-
-
-
   
 
-  // Function to handle adding a new transaction
+  // Function for new transaction
   const addTransaction = (newTransaction) => {
-    //  eg newTransaction is an object containing properties like id, description, and amount
-    // Add the new transaction to the existing transactions list using the spread operator
+
     setTransactions([...transactions, newTransaction]);
-    // Also update the filteredTransactions to include the new transaction if it matches the filter
+    
+    //update the filteredTransactions to include the new transaction if it matches the filter
     if (newTransaction.description.includes(filteredTerm)) {
       setFilteredTransactions([...filteredTransactions, newTransaction]);
     }
@@ -50,13 +45,13 @@ const App = () => {
 
   return (
     <div>
-      {/* Render the TransactionsForm component and pass the 'addTransaction' function */}
+      {}
       <TransactionsForm addTransaction={addTransaction} />
 
-      {/*SearchBar component and 'handleFilter' function */}
+      {}
       <SearchBar onFilter={handleFilter} />
 
-      {/* TransactionsTable component and pass the 'filteredTransactions' as a prop */}
+      {}
       <TransactionsTable transactions={filteredTransactions} />
     </div>
   );
